@@ -53,13 +53,21 @@
             android:textSize="18sp" />
     </RadioGroup>
 
+
     <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_margin="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="136dp"
+        app:TextColor="@color/white"
+        app:backGround="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioList"
+        app:textClicked="We are loading"
+        app:textNotClicked="Download" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
