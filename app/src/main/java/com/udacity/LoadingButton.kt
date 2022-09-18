@@ -20,8 +20,8 @@ class LoadingButton @JvmOverloads constructor(
         textSize = 60.0f
         textAlign = Paint.Align.CENTER
     }
-    private val paintCircle = Paint().apply { color = Color.YELLOW }
-    private val paintRec = Paint().apply { color = Color.BLUE }
+    private val paintCircle = Paint().apply { color = Color.RED }
+    private val paintRec = Paint().apply { color = Color.DKGRAY }
     private val Circle_PERCENTAGE_VALUE_HOLDER = "CirclePercentage"
     private val Rec_PERCENTAGE_VALUE_HOLDER = "RecPercentage"
     private var circleState = 0f
