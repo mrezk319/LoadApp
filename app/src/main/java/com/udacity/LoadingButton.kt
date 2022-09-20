@@ -38,28 +38,12 @@ class LoadingButton @JvmOverloads constructor(
             isClickable = true
         }
         if (clicked) {
-            can.drawRect(
-                0f,
-                0f,
-                recState,//////
-                height.toFloat(),
-                drawARectangle
-            )
+            can.drawRect(0f,0f,recState,height.toFloat(),drawARectangle)
             val Xtc = ((width / 2) - ((paintText.descent() + paintText.ascent())) / 2) + 65 * 4
             val Ytc = (height / 2).toFloat()
-            can.drawArc(
-                Xtc + 10 - 30, Ytc - 30,
-                Xtc + 40, Ytc + 30,
-                0F, CState,
-                true, drawACircle
-            )
+            can.drawArc(Xtc + 10 - 30, Ytc - 30,Xtc + 40, Ytc + 30,0F, CState,true, drawACircle)
         }
-        can.drawText(
-            text!!,
-            ((width / 2) - ((paintText.descent() + paintText.ascent())) / 2),
-            ((height / 2) - ((paintText.descent() + paintText.ascent())) / 2),
-            paintText
-        )
+        can.drawText(text!!,((width / 2) - ((paintText.descent() + paintText.ascent())) / 2),((height / 2) - ((paintText.descent() + paintText.ascent())) / 2),paintText)
     }
     override fun performClick(): Boolean {
         isClickable = false; clicked = true; text = textClicked
@@ -68,10 +52,7 @@ class LoadingButton @JvmOverloads constructor(
             0f,
             360f
         )
-        val recValue = PropertyValuesHolder.ofFloat(
-            Rec_PERCENTAGE_VALUE_HOLDER,
-            0f,
-            width.toFloat()
+        val recValue = PropertyValuesHolder.ofFloat(Rec_PERCENTAGE_VALUE_HOLDER,0f,width.toFloat()
         )
         val animator = ValueAnimator().apply {
             setValues(circleValue, recValue)
